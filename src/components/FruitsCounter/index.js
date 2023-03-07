@@ -4,12 +4,12 @@ import {Component} from 'react'
 import './index.css'
 
 class FruitsCounter extends Component {
-  state = {mangoescount: 0, bananascount: 0}
+  state = {key1: 0, key2: 0}
 
   onClickEatMango = () => {
     this.setState(prevState => {
       return {
-        mangoescount: prevState.mangoescount + 1,
+        key1: prevState.key1 + 1,
       }
     })
   }
@@ -17,19 +17,19 @@ class FruitsCounter extends Component {
   onClickEatBanana = () => {
     this.setState(prevState => {
       return {
-        bananascount: prevState.bananascount + 1,
+        key2: prevState.key2 + 1,
       }
     })
   }
 
   render() {
-    const {mangoescount, bananascount} = this.state
+    const {key1, key2} = this.state
     return (
       <div className="bg-container">
         <div className="inside-container">
           <h1 className="heading">
-            Bob ate <span className="fruit-count">{mangoescount}</span> mangoes{' '}
-            <span className="fruit-count">{bananascount}</span> bananas
+            Bob ate <span className="fruit-count">{key1}</span> mangoes{' '}
+            <span className="fruit-count">{key2}</span> bananas
           </h1>
           <div className="fruits-container">
             <div className="container">
